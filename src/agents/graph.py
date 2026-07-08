@@ -8,8 +8,8 @@ from db.loader import search_restaurant_tool
 langchain.debug = True
 
 llm = ChatGoogleGenerativeAI(
-    # model="gemini-3.5-flash",
-    model="gemini-3.1-flash-lite",
+    model="gemini-3.5-flash",
+    # model="gemini-3.1-flash-lite",
     google_api_key=os.environ.get("GOOGLE_API_KEY"),
     transport="rest"
 )

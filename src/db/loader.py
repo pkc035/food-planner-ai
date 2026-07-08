@@ -6,7 +6,8 @@ from chromadb.utils import embedding_functions
 
 class RestaurantDB:
     def __init__(self):
-        self.db_path = "./src/db/chroma_db"
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.db_path = os.path.join(base_dir, "chroma_db")
         self.client = chromadb.PersistentClient(path=self.db_path)
         api_key = os.environ.get("GOOGLE_API_KEY")
         
